@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: bootcamp-service
+#  cloud:
+#    config:
+#      uri: http://45.33.46.212:8888
+#  profiles:
+#    active: local
+#  main:
+#    allow-bean-definition-overriding: true
+  datasource:
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: GMT+6
+          lob:
+            non_contextual_creation: true
+        default_schema: bootcamp
+        show_sql: false
